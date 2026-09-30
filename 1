@@ -1,5 +1,143 @@
-$ mkdir 01-tareagit11
-$ cd 01-tareagit11/
-$ git init
-$ git config --global user.name Sebastian
-$ git config --global user.email samocol345@g.educaand.es
+//Fase 1
+mkdir 01-tareagit11
+
+cd 01-tareagit11/
+
+git init
+
+git config --global user.name Sebastian
+
+git config --global user.email samocol345@g.educaand.es
+
+ echo '<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica 01</title>
+    
+</head>
+<body>
+    <h1>Proyecto de práctica</h1>
+</body>
+</html>' > index.html
+
+echo "proyecto iniciado" > info.txt
+
+git status
+
+git add .
+
+git status
+
+git commit -m "feat: Estructura base del proyecto"
+//Hacer captura
+
+//Fase 2
+nano index.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica 01</title>
+</head>
+<body>
+    <h1>Proyecto de práctica</h1>
+<p> Bienvenidos a mi proyecto</p>
+</body> </html> //ctrl o ctrl x
+
+git diff HEAD
+//hago captura
+
+git add index.html
+
+git diff --cached
+//captura
+
+git commit -m "docs: Actualización de la portada"
+
+git tag v1.0-estable
+
+git show v1.0-estable
+
+git log --oneline --graph
+
+//Fase 3
+echo "Revision" > info.txt
+
+git commit -am "chore: Añadida revisión de fecha"
+
+git blame index.html
+
+nano index.html
+
+ linea no quieres guardar.//ctrl o ctrl x
+
+git status
+
+git restore index.html
+
+ git status
+
+ $ echo "cambio que voy a hacer en info" > info.txt
+
+ $ git add info.txt
+
+ git restore index.html
+
+ git restore --staged info.txt
+
+ git status
+
+ //Fase 4
+ nano index.html
+ 
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Práctica 01</title>
+</head>
+<body>
+    <h1>Proyecto de práctica</h1>
+<p> Bienvenidos a mi proyecto</p>
+<p> Linea que olvide incluir</p>
+</body> </html>
+
+$ git add index.html
+
+$ git commit -m "fix: Arreglo rápido"
+
+git commit --amend -m "fix: Corregido pequeño error tipográfico en la portada"
+
+$ echo "funcionalidad nueva 1" > info.txt
+$ echo "funcionalidad nueva 2" > info.txt
+$ echo "funcionalidad nueva 3" > info.txt
+
+$ git add info.txt
+
+git commit -m "feat: Gran funcionalidad v2.0"
+
+git reset --soft HEAD~1
+
+git status
+
+git commit -m "feat: Funcionalidad destructiva"
+
+git reset --hard HEAD~1
+
+git status
+
+//Fase 5
+rm index.html
+
+git status
+
+git restore index.html
+
+$ls
+
+git commit -m "fix: Bug introducido que debe ser deshecho"
+
+git revert HEAD
+
+$ git log --oneline --graph
